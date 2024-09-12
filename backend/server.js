@@ -3,14 +3,12 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth.routes.js';
 import connectToMongoDB from './db/connectToMongoDB.js';
 
-dotenv.config();
-
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+dotenv.config();
+
+app.use(express.json()); // to parse incoming requests with JSON payloads (req.body)
 
 app.use('/api/auth', authRoutes);
 
