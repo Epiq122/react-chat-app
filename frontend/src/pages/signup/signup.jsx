@@ -1,3 +1,5 @@
+import GenderCheckBox from './gender-checkbox';
+
 const Signup = () => {
   return (
     <div className='flex flex-col items-cenrer justify-center min-w-96 mx-auto'>
@@ -49,7 +51,7 @@ const Signup = () => {
             />
           </div>
 
-          {/* TODO: GENDER BOX} */}
+          <GenderCheckBox />
 
           <div>
             <button className='btn btn-block btn-sm mt-2'>Sign Up</button>
